@@ -4,36 +4,41 @@
   box-sizing: border-box;
 }
 .product-card {
-  margin: 10px;
+  background: white;
+  
   max-width: 200px;
   box-shadow: 0 0 2px grey;
   overflow: hidden;
   border-radius: 5px;
 }
 
-.product-card .content {
+.product-card__content {
   display: flex;
   max-width: 200px;
-  min-height: 300px;
+  height: 300px;
   overflow: hidden;
 
   position: relative;
 }
 
-.product-card .image {
+.product-card__image {
+  position: static;
   height: 200px;
   display: flex;
   align-items: center;
+  background: white;
   justify-content: center;
   margin-top: 15px;
 }
-.product-card .image img {
+.product-card__image img {
   width: 100%;
   object-fit: contain;
+  background: white;
+
   /* height: 100%; */
 }
 
-.product-card .details {
+.product-card__details {
   position: absolute;
   height: 50%;
   width: 100%;
@@ -45,39 +50,39 @@
   box-shadow: 0 0 2px grey;
 }
 
-.product-card .content:hover .details {
+.product-card__content:hover .product-card__details {
   top: 50%;
 }
 
-.product-card .details .head,
-.product-card .details .tail {
+.product-card__details__head,
+.product-card__details__tail {
   position: absolute;
   height: 50%;
   width: 100%;
   padding: 5px;
 }
-.product-card .details .tail {
+.product-card__details__tail {
   top: 50%;
   display: flex;
 }
-.product-card .details .tail .group {
+.product-card__details__group {
   flex-grow: 1;
 }
-.product-card .price {
+.product-card__price {
   font-weight: bold;
 }
-.product-card .name {
+.product-card__name {
   font-size: 0.9rem;
   font-weight: bold;
 }
-.product-card .detail {
+.product-card__detail {
   font-size: 0.8rem;
   color: grey;
 }
-.product-card .content:hover .overlay {
+.product-card__content:hover .product-card__overlay {
   opacity: 1;
 }
-.product-card .overlay {
+.product-card__overlay {
   display: flex;
   transition: 1s ease;
   background: rgba(180, 5, 5, 0.562);
@@ -89,7 +94,7 @@
   width: 100%;
   opacity: 0;
 }
-.product-card .overlay button {
+.product-card__overlay button {
   padding: 6px;
   border-radius: 5px;
   background: transparent;
@@ -100,7 +105,7 @@
   margin-top: 50px;
 }
 
-.product-card .overlay button:hover {
+.product-card__overlay button:hover {
   background: red;
   border-color: red;
 }
@@ -109,14 +114,14 @@
   box-shadow: 0 0 10px 3px rgb(207, 207, 207);
 }
 
-.product-card .control {
+.product-card__control {
   position: relative;
   z-index: 1;
   display: flex;
   box-shadow: 0px -1px 7px #c2c2c2;
   border-radius: 5px;
 }
-.product-card .control .item {
+.product-card__control__item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,26 +130,26 @@
   cursor: pointer;
 }
 
-.product-card .control .item:hover {
+.product-card__control__item:hover {
   background: rgb(241, 241, 241);
 }
-.cart-icon:hover {
+.product-card__control__item:hover .cart-icon {
   fill: rgb(0, 0, 196);
 }
-.heart-icon:hover {
+.product-card__control__item:hover .heart-icon {
   fill: rgb(196, 0, 0);
 }
-.rate-icon:hover {
+.product-card__control__item:hover .rate-icon {
   fill: rgb(0, 196, 49);
 }
-.share-icon:hover {
+.product-card__control__item:hover .share-icon {
   fill: rgb(141, 0, 196);
 }
 
-.product-card .control .item[data-tooltip] {
+.product-card__control__item[data-tooltip] {
   position: relative;
 }
-.product-card .control .item[data-tooltip]:hover:before {
+.product-card__control__item[data-tooltip]:hover:before {
   content: attr(data-tooltip);
   position: absolute;
   top: calc(-100% + 10px);
