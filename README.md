@@ -3,9 +3,8 @@
 A Card component built with React and displayed using infinity-react-cards
 <!-- 
 [![NPM Version][npm-image]][npm-url]
--->
 [![Build Status][travis-image]][https://travis-ci.org/subeshb1/infinity-react-cards]
-<!--[![Downloads Stats][npm-downloads]][npm-url] -->
+[![Downloads Stats][npm-downloads]][npm-url]-->
 
 Can be used to display items on an e-commerce site, with placeholder buttons for favouriting, 
 sharing and starring
